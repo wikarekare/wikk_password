@@ -11,6 +11,7 @@ Works with standard unix password types, clear text for testing, and decryptable
 
 ## FEATURES/PROBLEMS:
 
+*Should have locking around the changes to the password file, but haven't gotten around to the Lockfile gem yet.
 
 ## SYNOPSIS:
 
