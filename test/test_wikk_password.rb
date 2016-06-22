@@ -13,6 +13,8 @@ File.open('passwd', 'w+') do |fd|
 rob:$aes256$cxpzz9BMCOvyqfyngashHA==$Z9qOyqgMa4V7ffnI0NOjIhPv+ObAfhC0vyNPXoR5bbw=
 paul:$aes256$cxpzz9BMCOvyqfyngashHA==$9fvi6HvsXzc1jmkoIrKf0Q==
 arthur:$ct$$ClearTextPasswd
+a:$1$B7MDLZw4$aXO.KuKFYLVzF3Reoj.gt/
+b:$6$T/IaPjzt$KvPd51kOsZuBxzJkm81DtaTqiqTQ64ZmgdQwElfjMh0pZu0awPKA9E29KvPYS6.fITYtt1WSJ6aGIt2vzoxHB/
 EOF
 end
 
