@@ -8,7 +8,7 @@ module WIKK
   # @attr_reader [String] user the decrypted text
   # @attr_reader [String] password the encrypted password, in form $type$initial_vector$encrypted_text
   class Password
-    VERSION = '0.1.0'
+    VERSION = '0.1.1'
 
     attr_reader :user, :password
     
