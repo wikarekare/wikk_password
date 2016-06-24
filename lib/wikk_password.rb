@@ -8,7 +8,7 @@ module WIKK
   # @attr_reader [String] user the decrypted text
   # @attr_reader [String] password the encrypted password, in form $type$initial_vector$encrypted_text
   class Password
-    VERSION = '0.1.1'
+    VERSION = '0.1.2'
 
     attr_reader :user, :password
     
@@ -44,6 +44,18 @@ module WIKK
     def valid_sha256_response?(challenge, response)
       return response == Digest::SHA256.digest(decrypt + challenge).unpack('H*')[0]
     end
+    
+    #Compare an SHA256 hashed password + challenge with this users password
+    #  @param user [String] User name to fetch from password file, or to create, if new_user == true
+    #  @param config [WIKK:Configuration] or hash or class with attr_readers :passwordFile, :encryption, :key
+    #  @param challenge [String] a random string, sent to the remote client, added to the password, and SHA256 hashed
+    #  @param response [String] the remote clients hex_SHA256(password + challenge)
+    #  @return [Boolean] True if the users password matches the one that created the response.
+    #  @note The password entry must be decryptable, not a UNIX style hash.
+    #  @raise [ArgumentError] if the encryption method is unknown.
+    def self.valid_sha256_response?(user, config, challenge, response)
+      self.new(user, config).valid_sha256_response?(challenge, response)
+    end
       
     #Compares the password with the user's password by encrypting the password passed in
     #  @param password [String] The clear text password
@@ -51,7 +63,7 @@ module WIKK
     #  @raise [ArgumentError] if the encryption method is unknown.
     def valid?(ct_password)
       ignore,encryption,iv,password = @password.split('$')
-      encryption = DES if ignore != '' #No $'s in DES password, so ignore has text.
+      encryption = 'DES' if ignore != '' #No $'s in DES password, so ignore has text.
       case encryption
       when 'ct'; return ct_password == @password
       when 'aes256'; return encrypt(ct_password, encryption, iv) == @password
