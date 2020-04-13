@@ -8,7 +8,7 @@ require 'base64'
 
 require 'pp'
 puts "************  Create initial password file (passwd)  ************"
-File.open('passwd', 'w+') do |fd|
+File.open(__dir__ + '/passwd', 'w+') do |fd|
   fd.puts <<-EOF
 rob:$aes256$cxpzz9BMCOvyqfyngashHA==$Z9qOyqgMa4V7ffnI0NOjIhPv+ObAfhC0vyNPXoR5bbw=
 paul:$aes256$cxpzz9BMCOvyqfyngashHA==$9fvi6HvsXzc1jmkoIrKf0Q==
@@ -21,7 +21,7 @@ EOF
 end
 
 puts "************  Create test config file (test.js)  ************"
-File.open('test.js', 'w+') do |fd|
+File.open(__dir__ + '/test.js', 'w+') do |fd|
   fd.puts <<-EOF
 {
   "passwordFile": "passwd",
