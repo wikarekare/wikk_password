@@ -1,6 +1,6 @@
+#!/usr/local/bin/ruby
 require "test/unit"
 require "wikk_password"
-require "wikk_aes_256"
 require "wikk_configuration"
 require "openssl"
 require 'digest/sha2'
@@ -85,6 +85,7 @@ rachel.set_password(test_password)
 puts "is password valid? #{rachel.valid?(test_password)}"
 puts "************  Save rachel's entry to password file ************"
 rachel.save
+
 
 puts "************  Get user record for arthur and check password  ************"
 arthur = WIKK::Password.new('arthur', conf)
