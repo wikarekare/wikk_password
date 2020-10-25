@@ -1,8 +1,8 @@
 # wikk_password
 
-* http://wikarekare.github.com/wikk_password/
-* Source https://github.com/wikarekare/wikk_password
-* Gem https://rubygems.org/gems/wikk_password
+* Docs :: https://wikarekare.github.io/wikk_password/
+* Source :: https://github.com/wikarekare/wikk_password
+* Gem :: https://rubygems.org/gems/wikk_password
 
 ## DESCRIPTION:
 
