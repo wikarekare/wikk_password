@@ -12,10 +12,9 @@ Hoe.spec 'wikk_password' do
   self.yard_title = 'wikk_password'
   self.yard_options = ['--markup', 'markdown', '--protected']
   
-  self.dependency "unix-crypt", [">= 1.3.0"]
-  self.dependency "wikk_aes_256", [">= 0.1.4"]
+  self.dependency "unix-crypt", ['~> 1.3', '>= 1.3.0']
+  self.dependency "wikk_aes_256", ['~> 0.1', '>= 0.1.4']
 end
-
 
 #Validate manfest.txt
 #rake check_manifest
