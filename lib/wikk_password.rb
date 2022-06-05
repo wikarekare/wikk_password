@@ -3,7 +3,7 @@ module WIKK
   require 'wikk_aes_256'
   require 'digest/sha2'
   require 'base64'
-  require_relative 'unix_crypt/unix_crypt.rb' # Temp fix, as the original gem has gone away
+  require_relative 'unix-crypt/unix_crypt.rb' # Temp fix, as the original gem has gone away
 
   # READS/WRITES our private password file entries.
   #
