@@ -3,7 +3,7 @@ Manifest.txt
 README.md
 Rakefile
 lib/wikk_password.rb
-lib/unix-crypt/unix_crypt
+lib/unix-crypt/unix_crypt.rb
 lib/unix-crypt/lib/base.rb
 lib/unix-crypt/lib/des.rb
 lib/unix-crypt/lib/md5.rb
