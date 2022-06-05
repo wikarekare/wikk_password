@@ -1,6 +1,6 @@
 #!/usr/local/bin/ruby
 require 'test/unit'
-require 'wikk_password'
+require_relative '../lib/wikk_password.rb'
 require 'wikk_configuration'
 require 'openssl'
 require 'digest/sha2'
