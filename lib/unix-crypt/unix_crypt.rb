@@ -18,7 +18,7 @@ require 'digest'
 require 'securerandom'
 
 module UnixCrypt
-  VERSION = '1.3.0'
+  #  VERSION = '1.3.0'
 
   Error = Class.new(StandardError)
   SaltTooLongError = Class.new(Error)
