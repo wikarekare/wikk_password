@@ -38,7 +38,7 @@ rob:$aes256$cxpzz9BMCOvyqfyngashHA==$Z9qOyqgMa4V7ffnI0NOjIhPv+ObAfhC0vyNPXoR5bbw
 ## REQUIREMENTS:
 
 ###Gem requires
-* require 'unix_crypt'
+* require 'unix_crypt'  (No longer available. Temp fix has been to include this gem's code)
 * require 'wikk_aes_256'
 
 ## INSTALL:
